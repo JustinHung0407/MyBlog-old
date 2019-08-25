@@ -1,15 +1,10 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
-/* GET home page. */
-router.get('/', function (req, res, next) {
-    res.render('index', {title: 'Express'});
-});
+const testRouter = require('./test');
+const userRouter = require('./users');
 
-router.get('/test', function (req, res, next) {
-    res.render('index', {title: 'test'});
-});
+router.use('/users', userRouter);
+router.use('/tests', testRouter);
 
 module.exports = router;
-
-console.log('Hello Node.js'); // 在terminal 印出 Hello Node.js
