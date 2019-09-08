@@ -13,6 +13,8 @@ app.use(express.urlencoded({ extended: false }));
   res.json({ data: 'hello world' });
 });*/
 app.use('/', indexRouter);
+//call static file from public
+app.use(express.static(path.join(__dirname, 'public')));
 
 //link index.html
 app.get('/', function(req, res) {
@@ -20,11 +22,6 @@ app.get('/', function(req, res) {
     if (err) res.send(404);
   });
 });
-
-app.use(express.static(path.join(__dirname, 'public')));
-app.use('/images', express.static(path.join(__dirname, '/public')));
-app.use('/js', express.static(path.join(__dirname, '/public')));
-app.use('/css', express.static(path.join(__dirname, '/public')));
 
 app.use(function(err, req, res, next) {
   if (err.code >= 500) {
