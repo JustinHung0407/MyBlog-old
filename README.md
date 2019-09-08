@@ -1,7 +1,8 @@
 # MyBlog
 Record My Life and Get Inspired
 
-One Paragraph of project description goes here
+#My blog on heroku
+**[https://justinblog.herokuapp.com/](https://justinblog.herokuapp.com/)**
 
 ## Getting Started
 
