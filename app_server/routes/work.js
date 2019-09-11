@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const controller = require('../controllers/tests');
+const controller = require('../controllers/work');
 
 /* GET users listing. */
-router.get('/', controller.test);
+router.get('/', controller.work);
 
 /*practice*/
 router.get('/cool', controller.cool);

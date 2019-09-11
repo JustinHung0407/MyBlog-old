@@ -3,18 +3,23 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "devstart": "nodemon .bin/www"
   },
   "dependencies": {
     "connect": "^3.7.0",
     "cookie-parser": "~1.4.4",
+    "darkreader": "^4.7.15",
+    "darkreader-api": "^0.2.0",
     "debug": "~2.6.9",
     "express": "^4.17.1",
     "heroku": "^7.29.0",
     "http-errors": "~1.6.3",
     "lodash": "^4.17.15",
     "mongodb": "^3.3.2",
+    "mongoose": "^5.7.0",
     "morgan": "~1.9.1",
+    "nodemon": "^1.19.2",
     "pug": "^2.0.4"
   },
   "devDependencies": {

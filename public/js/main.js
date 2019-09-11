@@ -289,3 +289,5 @@
     owlCrouselFeatureSlide();
   });
 })();
+// eslint-disable-next-line no-undef
+DarkReader.enable(100, 90, 10);

@@ -1,7 +1,7 @@
 # MyBlog
 Record My Life and Get Inspired
 
-#My blog on heroku
+# My blog on heroku
 **[https://justinblog.herokuapp.com/](https://justinblog.herokuapp.com/)**
 
 ## Getting Started
