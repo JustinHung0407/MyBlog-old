@@ -9,22 +9,13 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+// View engine setup.
+app.set('views', path.resolve(__dirname, 'views'));
+app.set('view engine', 'pug');
+
 //call static file from public
 app.use(express.static(path.join(__dirname, 'public')));
-//app.use('/', indexRouter);
-
-app.get('/blog', function(req, res) {
-  res.render('blog');
-});
-
-//link index.html
-/*app.get('/', function(req, res) {
-  res.sendfile(path.resolve(__dirname + '/public/index.html'));
-});
-
-app.get('/blog', function(req, res) {
-  res.sendfile(path.resolve(__dirname + '/public/blog.html'));
-});*/
+app.use('/', indexRouter);
 
 app.use(function(err, req, res, next) {
   if (err.code >= 500) {

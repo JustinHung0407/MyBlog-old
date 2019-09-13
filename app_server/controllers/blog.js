@@ -6,9 +6,8 @@ exports = module.exports;
 };*/
 
 exports.blog = (req, res, next) => {
-  res.send('blog route');
-  next();
-  res.render('../../public/blog.html');
+  res.set('Content-Type', 'text/html');
+  res.sendfile('./app_server/views/blog.html');
 };
 
 exports.cool = (req, res, next) => {

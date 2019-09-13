@@ -1,5 +1,594 @@
 extends layout
 
-block content
-    h1= title
-    p Welcome to #{title}
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        title Justin Blog
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        meta(name="author" content="Justin Hung")
+
+        link(rel="shortcut icon" href="/images/favicon.ico")
+        link(href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet")
+        // Animate.css
+        link(rel="stylesheet" href="/css/animate.css")
+        // Icomoon Icon Fonts
+        link(rel="stylesheet" href="/css/icomoon.css")
+        // Bootstrap
+        link(rel="stylesheet" href="/css/bootstrap.css")
+        // Flexslider
+        link(rel="stylesheet" href="/css/flexslider.css")
+        // Owl Carousel
+        link(rel="stylesheet" href="css/owl.carousel.min.css")
+        link(rel="stylesheet" href="css/owl.theme.default.min.css")
+        // Theme style
+        link(rel="stylesheet" href="css/style.css")
+        // Darkreader
+        link(href="https://unpkg.com/darkreader")
+        // Modernizr JS
+        script(src="js/modernizr-2.6.2.min.js")
+        // FOR IE9 below
+        //if lt IE 9
+            script(src="js/respond.min.js")
+    body
+        #colorlib-page
+            .container-wrap
+                a.js-colorlib-nav-toggle.colorlib-nav-toggle(href="#" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar")
+                    i
+                aside#colorlib-aside.border.js-fullheight(role="complementary")
+                    .text-center
+                        .author-img(style="background-image: url('images/selfie.JPG');")
+                        h1#colorlib-logo
+                            a(href="index.html") Justin Hung
+                        span.position
+                            a(href="#") Software Engineer
+                            |  from Taiwan
+                    nav#colorlib-main-menu.navbar(role="navigation")
+                        #navbar.collapse
+                            ul
+                                li.active
+                                    a(href="#" data-nav-section="home") Home
+                                li
+                                    a(href="#" data-nav-section="about") About
+                                // li><a href="#" data-nav-section="services">Services</a></li
+                                li
+                                    a(href="#" data-nav-section="skills") Skills
+                                li
+                                    a(href="#" data-nav-section="education") Education
+                                li
+                                    a(href="#" data-nav-section="experience") Experience
+                                li
+                                    a(href="#" data-nav-section="work") Work
+                                li
+                                    a(href="#" data-nav-section="blog") Blog
+                                li
+                                    a(href="#" data-nav-section="contact") Contact
+                    .colorlib-footer
+                        p
+                            small
+                                | ©
+                                // Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.
+                                | Copyright ©2019 All rights reserved | This template is made with
+                                i.icon-heart(aria-hidden="true")
+                                |  by
+                                a(href="https://colorlib.com" target="_blank") Colorlib
+                                // Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.
+                                span
+                                    | Design by :
+                                    a(href="https://unsplash.com/" target="_blank") Justin Hung
+                        ul
+                            li
+                                a(href="https://github.com/JustinHung0407")
+                                    i.icon-github
+                            li
+                                a(href="https://www.facebook.com/HUGH.com.tw")
+                                    i.icon-facebook2
+                            li
+                                a(href="https://www.instagram.com/hugh_hung0407/")
+                                    i.icon-instagram
+                            li
+                                a(href="https://www.linkedin.com/in/justinhung0407/")
+                                    i.icon-linkedin2
+                #colorlib-main
+                    section#colorlib-hero.js-fullheight(data-section="home")
+                        .flexslider.js-fullheight
+                            ul.slides
+                                li(style="background-image: url('images/img_bg_1.jpg');")
+                                    .overlay
+                                    .container-fluid
+                                        .row
+                                            .col-md-6.col-md-offset-3.col-md-pull-3.col-sm-12.col-xs-12.js-fullheight.slider-text
+                                                .slider-text-inner.js-fullheight
+                                                    .desc
+                                                        h1
+                                                            | Hi!
+                                                            br
+                                                            | I'm Justin
+                                                        h2 This is my blog for recording life
+                                                        p
+                                                            a.btn.btn-primary.btn-learn(href="/downloadcv")
+                                                                | Download CV
+                                                                i.icon-download4
+                                li(style="background-image: url('images/img_bg_1.jpg');")
+                                    .overlay
+                                    .container-fluid
+                                        .row
+                                            .col-md-6.col-md-offset-3.col-md-pull-3.col-sm-12.col-xs-12.js-fullheight.slider-text
+                                                .slider-text-inner
+                                                    .desc
+                                                        h1
+                                                            | I am
+                                                            br
+                                                            | a Programmer
+                                                        h2
+                                                            b
+                                                                | This is my blog for recording life
+                                                                a(href="https://colorlib.com/" target="_blank")
+                                                        p
+                                                            a.btn.btn-primary.btn-learn(href="/downloadcv")
+                                                                | View Portfolio
+                                                                i.icon-briefcase3
+                    section.colorlib-about(data-section="about")
+                        .colorlib-narrow-content
+                            .row
+                                .col-md-12
+                                    .row.row-bottom-padded-sm.animate-box(data-animate-effect="fadeInLeft")
+                                        .col-md-12
+                                            .about-desc
+                                                span.heading-meta About Me
+                                                h2.colorlib-heading Who Am I?
+                                                p
+                                                    strong Hi I'm Justin Hung
+                                                p
+                                                    | “I am graduated from Tamkang University, Department of Information Innovation Technology.
+                                                    | I believe that my strong IT background and previous experiences studying abroad in my juniors position me as a strong entry-level candidate for a leading technology company.
+                                                    | To that end, I would like to express my interest in the full-time System engineer position at XXX and have enclosed my resume and background information for your review."
+                                                p
+                                                    | “A copy of my resume is enclosed for your reference. I would appreciate an opportunity to discuss my qualifications at your earliest convenience. I can be reached at 0960-930-586 or via email at hugh.12345zxcvb@gmail.com. Thank you for your time and consideration.”
+                                    .row
+                                        .col-md-3.animate-box(data-animate-effect="fadeInLeft")
+                                            .services.color-1
+                                                span.icon2
+                                                    i.icon-code-outline
+                                                h3 Program Design
+                                        .col-md-3.animate-box(data-animate-effect="fadeInRight")
+                                            .services.color-2
+                                                span.icon2
+                                                    i.icon-globe-outline
+                                                h3 Web Design
+                                        .col-md-3.animate-box(data-animate-effect="fadeInTop")
+                                            .services.color-3
+                                                span.icon2
+                                                    i.icon-data
+                                                h3 Software
+                                        .col-md-3.animate-box(data-animate-effect="fadeInBottom")
+                                            .services.color-4
+                                                span.icon2
+                                                    i.icon-phone3
+                                                h3 Application
+
+                    #colorlib-counter.colorlib-counters(style="background-image: url('images/cover_bg_1.jpg');" data-stellar-background-ratio="0.5")
+                        .overlay
+                        .colorlib-narrow-content
+                            .row
+                            .row
+                                .col-md-3.text-center.animate-box
+                                    span.colorlib-counter.js-counter(data-from="0" data-to="309" data-speed="5000" data-refresh-interval="50")
+                                    span.colorlib-counter-label Cups of coffee
+                                .col-md-3.text-center.animate-box
+                                    span.colorlib-counter.js-counter(data-from="0" data-to="5" data-speed="5000" data-refresh-interval="50")
+                                    span.colorlib-counter-label Projects
+                                .col-md-3.text-center.animate-box
+                                    span.colorlib-counter.js-counter(data-from="0" data-to="3" data-speed="5000" data-refresh-interval="50")
+                                    span.colorlib-counter-label Clients
+                                .col-md-3.text-center.animate-box
+                                    span.colorlib-counter.js-counter(data-from="0" data-to="5" data-speed="5000" data-refresh-interval="50")
+                                    span.colorlib-counter-label Partners
+                    section.colorlib-skills(data-section="skills")
+                        .colorlib-narrow-content
+                            .row
+                                .col-md-6.col-md-offset-3.col-md-pull-3.animate-box(data-animate-effect="fadeInLeft")
+                                    span.heading-meta My Specialty
+                                    h2.colorlib-heading.animate-box My Skills
+                            .row
+                                .col-md-12.animate-box(data-animate-effect="fadeInLeft")
+                                    p
+                                        | I love the sense of achievement after a project is complete, to this end, I had learn Java and C++ from Gjun PC school when I was in senior high school. After that, I was studying in Tamkang University, majoring in computer science. During my school life, I self-studied python using Django framework and use Node.js create this blog. Nevertheless, my graduate project is a food recommendation system written in python and Neo4j.
+                                .col-md-6.animate-box(data-animate-effect="fadeInLeft")
+                                    .progress-wrap
+                                        h3 Python
+                                        .progress
+                                            .progress-bar.color-1(role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%")
+                                                span 60%
+                                .col-md-6.animate-box(data-animate-effect="fadeInRight")
+                                    .progress-wrap
+                                        h3 C++
+                                        .progress
+                                            .progress-bar.color-2(role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%")
+                                                span 50%
+                                .col-md-6.animate-box(data-animate-effect="fadeInLeft")
+                                    .progress-wrap
+                                        h3 HTML5
+                                        .progress
+                                            .progress-bar.color-3(role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:85%")
+                                                span 85%
+                                .col-md-6.animate-box(data-animate-effect="fadeInRight")
+                                    .progress-wrap
+                                        h3 CSS3
+                                        .progress
+                                            .progress-bar.color-4(role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%")
+                                                span 80%
+                                .col-md-6.animate-box(data-animate-effect="fadeInLeft")
+                                    .progress-wrap
+                                        h3 WordPress
+                                        .progress
+                                            .progress-bar.color-5(role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:75%")
+                                                span 75%
+                                .col-md-6.animate-box(data-animate-effect="fadeInRight")
+                                    .progress-wrap
+                                        h3 JavaScript
+                                        .progress
+                                            .progress-bar.color-6(role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%")
+                                                span 60%
+                    section.colorlib-education(data-section="education")
+                        .colorlib-narrow-content
+                            .row
+                                .col-md-6.col-md-offset-3.col-md-pull-3.animate-box(data-animate-effect="fadeInLeft")
+                                    span.heading-meta Education
+                                    h2.colorlib-heading.animate-box Education
+                            .row
+                                .col-md-12.animate-box(data-animate-effect="fadeInLeft")
+                                    .fancy-collapse-panel
+                                        #accordion.panel-group(role="tablist" aria-multiselectable="true")
+                                            .panel.panel-default
+                                                #headingOne.panel-heading(role="tab")
+                                                    h4.panel-title
+                                                        a(data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne")
+                                                            | Bachelor's Degree of Computer Science
+                                                #collapseOne.panel-collapse.collapse.in(role="tabpanel" aria-labelledby="headingOne")
+                                                    .panel-body
+                                                        .row
+                                                            .col-md-6
+                                                                p
+                                                                    | Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+                                                            .col-md-6
+                                                                p
+                                                                    | Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+                                            .panel.panel-default
+                                                #headingTwo.panel-heading(role="tab")
+                                                    h4.panel-title
+                                                        a.collapsed(data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo")
+                                                            | Diploma in Information Technology
+                                                #collapseTwo.panel-collapse.collapse(role="tabpanel" aria-labelledby="headingTwo")
+                                                    .panel-body
+                                                        p
+                                                            | Far far away, behind the word
+                                                            strong mountains
+                                                            | , far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+                                                        ul
+                                                            li Separated they live in Bookmarksgrove right
+                                                            li Separated they live in Bookmarksgrove right
+                                            .panel.panel-default
+                                                #headingFour.panel-heading(role="tab")
+                                                    h4.panel-title
+                                                        a.collapsed(data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour")
+                                                            | English Language Institute
+                                                #collapseFour.panel-collapse.collapse(role="tabpanel" aria-labelledby="headingFour")
+                                                    .panel-body
+                                                        p
+                                                            | Far far away, behind the word
+                                                            strong mountains
+                                                            | , far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+                                            .panel.panel-default
+                                                #headingFive.panel-heading(role="tab")
+                                                    h4.panel-title
+                                                        a.collapsed(data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive")
+                                                            | High School
+                                                #collapseFive.panel-collapse.collapse(role="tabpanel" aria-labelledby="headingFive")
+                                                    .panel-body
+                                                        p
+                                                            | Far far away, behind the word
+                                                            strong mountains
+                                                            | , far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+                    section.colorlib-experience(data-section="experience")
+                        .colorlib-narrow-content
+                            .row
+                                .col-md-6.col-md-offset-3.col-md-pull-3.animate-box(data-animate-effect="fadeInLeft")
+                                    span.heading-meta Experience
+                                    h2.colorlib-heading.animate-box Work Experience
+                            .row
+                                .col-md-12
+                                    .timeline-centered
+                                        article.timeline-entry.animate-box(data-animate-effect="fadeInLeft")
+                                            .timeline-entry-inner
+                                                .timeline-icon.color-1
+                                                    i.icon-pen2
+                                                .timeline-label
+                                                    h2
+                                                        a(href="#") Assistant Engineer
+                                                        span Jan 2015 ~ Oct 2018
+                                                    p
+                                                        | Mainly rebuild and maintenance school's new website(
+                                                        a(target="_blank" href="http://web.lanyang.tku.edu.tw/") http://web.lanyang.tku.edu.tw/
+                                                        | )
+                                                        |                                          , also handling school's Information Appliance and network problem.
+                                        article.timeline-entry.animate-box(data-animate-effect="fadeInRight")
+                                            .timeline-entry-inner
+                                                .timeline-icon.color-2
+                                                    i.icon-pen2
+                                                .timeline-label
+                                                    h2
+                                                        a(href="#") Information Engineer
+                                                        span Sep 2017 ~ Dec 2017
+                                                    br
+                                                    | Mainly improve the efficiency and satisfaction of online repair system services
+                                                    |                                       Received the Silver Tower Award(
+                                                    a(target="_blank" href="https://bit.ly/2Zaj45s") https://bit.ly/2Zaj45s
+                                                    | )
+                                                    p
+                                        article.timeline-entry.begin.animate-box(data-animate-effect="fadeInBottom")
+                                            .timeline-entry-inner
+                                                .timeline-icon.color-none
+                    section.colorlib-work(data-section="work")
+                        .colorlib-narrow-content
+                            .row
+                                .col-md-6.col-md-offset-3.col-md-pull-3.animate-box(data-animate-effect="fadeInLeft")
+                                    span.heading-meta My Work
+                                    h2.colorlib-heading.animate-box Recent Work
+                            .row.row-bottom-padded-sm.animate-box(data-animate-effect="fadeInLeft")
+                                .col-md-12
+                                    p.work-menu
+                                        span
+                                            a.active(href="#") Graphic Design
+                                        span
+                                            a(href="#") Web Design
+                                        span
+                                            a(href="#") Software
+                                        span
+                                            a(href="#") Apps
+                            .row
+                                .col-md-6.animate-box(data-animate-effect="fadeInLeft")
+                                    .project(style="background-image: url('images/img-1.jpg');")
+                                        .desc
+                                            .con
+                                                h3
+                                                    a(href="work.html") Work 01
+                                                span Website
+                                                p.icon
+                                                    span
+                                                        a(href="#")
+                                                            i.icon-share3
+                                                    span
+                                                        a(href="#")
+                                                            i.icon-eye
+                                                            |  100
+                                                    span
+                                                        a(href="#")
+                                                            i.icon-heart
+                                                            |  49
+                                .col-md-6.animate-box(data-animate-effect="fadeInRight")
+                                    .project(style="background-image: url('images/img-2.jpg');")
+                                        .desc
+                                            .con
+                                                h3
+                                                    a(href="work.html") Work 02
+                                                span Animation
+                                                p.icon
+                                                    span
+                                                        a(href="#")
+                                                            i.icon-share3
+                                                    span
+                                                        a(href="#")
+                                                            i.icon-eye
+                                                            |  100
+                                                    span
+                                                        a(href="#")
+                                                            i.icon-heart
+                                                            |  49
+                                .col-md-6.animate-box(data-animate-effect="fadeInTop")
+                                    .project(style="background-image: url('images/img-3.jpg');")
+                                        .desc
+                                            .con
+                                                h3
+                                                    a(href="work.html") Work 03
+                                                span Illustration
+                                                p.icon
+                                                    span
+                                                        a(href="#")
+                                                            i.icon-share3
+                                                    span
+                                                        a(href="#")
+                                                            i.icon-eye
+                                                            |  100
+                                                    span
+                                                        a(href="#")
+                                                            i.icon-heart
+                                                            |  49
+                                .col-md-6.animate-box(data-animate-effect="fadeInBottom")
+                                    .project(style="background-image: url('images/img-4.jpg');")
+                                        .desc
+                                            .con
+                                                h3
+                                                    a(href="work.html") Work 04
+                                                span Application
+                                                p.icon
+                                                    span
+                                                        a(href="#")
+                                                            i.icon-share3
+                                                    span
+                                                        a(href="#")
+                                                            i.icon-eye
+                                                            |  100
+                                                    span
+                                                        a(href="#")
+                                                            i.icon-heart
+                                                            |  49
+                                .col-md-6.animate-box(data-animate-effect="fadeInLeft")
+                                    .project(style="background-image: url('images/img-5.jpg');")
+                                        .desc
+                                            .con
+                                                h3
+                                                    a(href="work.html") Work 05
+                                                span Graphic, Logo
+                                                p.icon
+                                                    span
+                                                        a(href="#")
+                                                            i.icon-share3
+                                                    span
+                                                        a(href="#")
+                                                            i.icon-eye
+                                                            |  100
+                                                    span
+                                                        a(href="#")
+                                                            i.icon-heart
+                                                            |  49
+                                .col-md-6.animate-box(data-animate-effect="fadeInRight")
+                                    .project(style="background-image: url('images/img-6.jpg');")
+                                        .desc
+                                            .con
+                                                h3
+                                                    a(href="work.html") Work 06
+                                                span Web Design
+                                                p.icon
+                                                    span
+                                                        a(href="#")
+                                                            i.icon-share3
+                                                    span
+                                                        a(href="#")
+                                                            i.icon-eye
+                                                            |  100
+                                                    span
+                                                        a(href="#")
+                                                            i.icon-heart
+                                                            |  49
+                            .row
+                                .col-md-12.animate-box
+                                    p
+                                        a.btn.btn-primary.btn-lg.btn-load-more(href="#")
+                                            | Load more
+                                            i.icon-reload
+                    section.colorlib-blog(data-section="blog")
+                        .colorlib-narrow-content
+                            .row
+                                .col-md-6.col-md-offset-3.col-md-pull-3.animate-box(data-animate-effect="fadeInLeft")
+                                    span.heading-meta Read
+                                    h2.colorlib-heading Recent Blog
+                            .row
+                                .col-md-4.col-sm-6.animate-box(data-animate-effect="fadeInLeft")
+                                    .blog-entry
+                                        a.blog-img(href="../app_server/views/blog.html")
+                                            img.img-responsive(src="images/blog-1.jpg" alt="HTML5 Bootstrap Template by colorlib.com")
+                                        .desc
+                                            span
+                                                small April 14, 2018
+                                                |  |
+                                                small  Web Design
+                                                |  |
+                                                small
+                                                    i.icon-bubble3
+                                                    |  4
+                                            h3
+                                                a(href="../app_server/views/blog.html") Renovating National Gallery
+                                            p
+                                                | Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+                                .col-md-4.col-sm-6.animate-box(data-animate-effect="fadeInRight")
+                                    .blog-entry
+                                        a.blog-img(href="../app_server/views/blog.html")
+                                            img.img-responsive(src="images/blog-2.jpg" alt="HTML5 Bootstrap Template by colorlib.com")
+                                        .desc
+                                            span
+                                                small April 14, 2018
+                                                |  |
+                                                small  Web Design
+                                                |  |
+                                                small
+                                                    i.icon-bubble3
+                                                    |  4
+                                            h3
+                                                a(href="../app_server/views/blog.html") Wordpress for a Beginner
+                                            p
+                                                | Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+                                .col-md-4.col-sm-6.animate-box(data-animate-effect="fadeInLeft")
+                                    .blog-entry
+                                        a.blog-img(href="../app_server/views/blog.html")
+                                            img.img-responsive(src="images/blog-3.jpg" alt="HTML5 Bootstrap Template by colorlib.com")
+                                        .desc
+                                            span
+                                                small April 14, 2018
+                                                |  |
+                                                small  Inspiration
+                                                |  |
+                                                small
+                                                    i.icon-bubble3
+                                                    |  4
+                                            h3
+                                                a(href="../app_server/views/blog.html") Make website from scratch
+                                            p
+                                                | Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+                            .row
+                                .col-md-12.animate-box
+                                    p
+                                        a.btn.btn-primary.btn-lg.btn-load-more(href="#")
+                                            | Load more
+                                            i.icon-reload
+                    section.colorlib-contact(data-section="contact")
+                        .colorlib-narrow-content
+                            .row
+                                .col-md-6.col-md-offset-3.col-md-pull-3.animate-box(data-animate-effect="fadeInLeft")
+                                    span.heading-meta Get in Touch
+                                    h2.colorlib-heading Contact
+                            .row
+                                .col-md-5
+                                    .colorlib-feature.colorlib-feature-sm.animate-box(data-animate-effect="fadeInLeft")
+                                        .colorlib-icon
+                                            i.icon-instagram
+                                        .colorlib-text
+                                            p
+                                                a(href="https://www.instagram.com/hugh_hung0407/") Justin_Hung0407
+                                    .colorlib-feature.colorlib-feature-sm.animate-box(data-animate-effect="fadeInLeft")
+                                        .colorlib-icon
+                                            i.icon-mail
+                                        .colorlib-text
+                                            p hugh.12345zxcvb@gmail.com
+                                    .colorlib-feature.colorlib-feature-sm.animate-box(data-animate-effect="fadeInLeft")
+                                        .colorlib-icon
+                                            i.icon-phone
+                                        .colorlib-text
+                                            p
+                                                a(href="tel://") 0960930586
+                                .col-md-7.col-md-push-1
+                                    .row
+                                        .col-md-10.col-md-offset-1.col-md-pull-1.animate-box(data-animate-effect="fadeInRight")
+                                            form(action="")
+                                                .form-group
+                                                    input.form-control(type="text" placeholder="Name")
+                                                .form-group
+                                                    input.form-control(type="text" placeholder="Email")
+                                                .form-group
+                                                    input.form-control(type="text" placeholder="Subject")
+                                                .form-group
+                                                    textarea#message.form-control(name="" cols="30" rows="7" placeholder="Message")
+                                                .form-group
+                                                    input.btn.btn-primary.btn-send-message(type="submit" value="Send Message")
+                // end:colorlib-main
+            // end:container-wrap
+        // end:colorlib-page
+        // jQuery
+        script(src="js/jquery.min.js")
+        // jQuery Easing
+        script(src="js/jquery.easing.1.3.js")
+        // Bootstrap
+        script(src="js/bootstrap.min.js")
+        // Waypoints
+        script(src="js/jquery.waypoints.min.js")
+        // Flexslider
+        script(src="js/jquery.flexslider-min.js")
+        // Owl carousel
+        script(src="js/owl.carousel.min.js")
+        // Counters
+        script(src="js/jquery.countTo.js")
+        script(src="js/darkreader.js")
+        // MAIN JS
+        script(src="js/main.js")
