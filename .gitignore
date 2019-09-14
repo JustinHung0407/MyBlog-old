@@ -89,3 +89,9 @@ typings/
 
 #lock files
 package-lock.json
+
+#eslint
+.eslintrc.js
+
+#app_client
+app_client

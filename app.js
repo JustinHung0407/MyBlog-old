@@ -14,17 +14,17 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 // View engine setup.
-app.set('views', path.resolve(__dirname, 'views'));
-app.set('view engine', 'pug');
+// app.set('views', path.resolve(__dirname, 'views'));
+// app.set('view engine', 'pug');
 
 //call static file from public
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 
 //Connect to DB
-mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true }, () =>
-  console.log('connect to DB!'),
-);
+// mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true }, () =>
+//   console.log('connect to DB!'),
+// );
 
 app.use(function(err, req, res, next) {
   if (err.code >= 500) {

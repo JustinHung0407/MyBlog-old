@@ -6,6 +6,10 @@ const userRouter = require('./users');
 const workRouter = require('./work');
 const contactRouter = require('./contact');
 
+router.use('/', (req, res, next) => {
+  res.sendfile('../../public/index.html');
+  next();
+});
 router.use('/users', userRouter);
 router.use('/work', workRouter);
 router.use('/contact', contactRouter);
