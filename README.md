@@ -1,4 +1,14 @@
+# (DEPRECATED) 
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
+
+Please visit my new blog:
+
+- Github repository: https://github.com/JustinHung0407/Hugo-Blog
+
+- Blog URL: https://blog.fism.app/
+
 # MyBlog
+
 Record My Life and Get Inspired
 
 # My blog on heroku
